@@ -50,7 +50,7 @@ app.get('/health', (req, res) => {
 app.use('/api/v1/user', authRoutes);
 app.use('/api/v1/emp', employeeRoutes);
 
-app.use('*', (req, res, next) => {
+app.use((req, res, next) => {
   res.status(404).json({
     success: false,
     message: `Cannot find ${req.originalUrl} on this server.`
