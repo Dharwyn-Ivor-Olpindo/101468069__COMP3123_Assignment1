@@ -23,3 +23,17 @@ const app = express();
 
 // Helmet is initialized here to set secure HTTP headers
 app.use(helmet());
+
+## Sample Marking Credentials
+
+To facilitate evaluation and testing of the API endpoints, you may use the following pre-configured non-sensitive test credentials:
+
+### Test Account 1 (Primary User)
+* **Username:** `testuser101 and testuser102`
+* **Email:** `testuser101@example.com and testuser102@example.com`
+* **Password:** `Password123!`
+
+### Test Account 2 (Secondary User for Ownership / Authorization Tests)
+* **Username:** `testuser202`
+* **Email:** `testuser202@example.com`
+* **Password:** `Password123!`
