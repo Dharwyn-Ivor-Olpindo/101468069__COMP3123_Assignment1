@@ -11,4 +11,15 @@ A RESTful backend API built with Node.js, Express, and MongoDB. The application 
 * **Framework:** Express.js
 * **Database:** MongoDB Atlas & Mongoose ORM
 * **Authentication:** JSON Web Tokens (JWT) & bcryptjs
-* **Security & Logging:** Helmet, express-rate-limit, custom logger
+## Security & Middleware Configuration
+
+### Helmet Security Headers
+To ensure robust security and protect the application from well-known web vulnerabilities (such as cross-site scripting, clickjacking, and MIME-sniffing), **Helmet** is integrated directly into the Express application pipeline in `server.js`.
+
+**Code Verification (`server.js`):**
+```javascript
+const helmet = require('helmet');
+const app = express();
+
+// Helmet is initialized here to set secure HTTP headers
+app.use(helmet());
